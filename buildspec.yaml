@@ -10,5 +10,4 @@ phases:
       - mv target/TransunionMailImport-1.0.jar TransunionMailImport-1.0.jar
 artifacts:
   files:
-    - TransunionMailImport-1.0.jar
-    - .ebextensions/**/*
+    - template.yaml
