@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  AWS
+
+  Sample SAM Template for AWS
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 120
+
+Resources:
+  TransunionMailHandler:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: TransunionMailImport
+      Handler: TransunionMailHandler.App::handleRequest
+      Runtime: java11
+      MemorySize: 512
+      Policies:
+        - AmazonS3FullAccess
+        - AWSLambdaBasicExecutionRole
+        - AmazonSNSFullAccess
+      Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+        Variables:
+          DBConnectionUsername: goodsaok_admin
+          DBConnectionPassword: $0m3B@d@$$P@$$w0rd!
+          DBConnectionHost: goodspeed.co.za
+          DBConnectionDatabase: goodsaok_defaultDB
+          S3MailContainer: transunion-mail
+          BatchSize: 1000
