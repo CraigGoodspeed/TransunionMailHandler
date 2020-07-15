@@ -1,14 +1,8 @@
 package Entity;
 
 import lombok.Data;
-import lombok.SneakyThrows;
-import lombok.experimental.FieldNameConstants;
-import org.apache.commons.lang3.StringUtils;
-
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 //MMCode,VehicleType,Make,Model,Variant,RegYear,PublicationSection,Master_Model,Make_Code,
