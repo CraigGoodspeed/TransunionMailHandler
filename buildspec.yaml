@@ -6,9 +6,9 @@ phases:
       java: corretto11
   post_build:
     commands:
-      - mvn package
-      - mv target/TransunionMailImport.jar TransunionMailImport.jar
+      - cd TransunionMailImport && mvn package
+      - mv TransunionMailImport/target/TransunionMailImport-1.0.jar TransunionMailImport-1.0.jar
 artifacts:
   files:
-    - TransunionMailImport.jar
+    - TransunionMailImport-1.0.jar
     - .ebextensions/**/*
