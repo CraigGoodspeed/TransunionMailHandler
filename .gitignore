@@ -1,5 +1,7 @@
-.aws-sam
-.idea
-/TransunionMailImport/.aws-sam
+.aws-sam/*
+.idea/*
+TransunionMailImport/.aws-sam
 *.iml
 /TransunionMailImport/target
+/.idea/
+/TransunionMailImport/target/

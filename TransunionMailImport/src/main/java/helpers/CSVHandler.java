@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class CSVHandler {
-    int batchSize = 100;
+    int batchSize;
     public CSVHandler(int batchSize){
         this.batchSize= batchSize;
     }
