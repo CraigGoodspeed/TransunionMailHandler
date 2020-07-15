@@ -8,6 +8,7 @@ phases:
     commands:
       - cd TransunionMailImport && mvn package
       - mv target/TransunionMailImport-1.0.jar TransunionMailImport-1.0.jar
+      - sam deploy --template-file template.yaml --stack-name TransunionMailHandler --s3-bucket transunion-mail-handler-source-code --capabilities CAPABILITY_AUTO_EXPAND CAPABILITY_IAM
 artifacts:
   files:
     - template.yaml
