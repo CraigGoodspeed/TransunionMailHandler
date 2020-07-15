@@ -18,6 +18,10 @@ Resources:
       Handler: TransunionMailHandler.App::handleRequest
       Runtime: java11
       MemorySize: 512
+      AutoPublishAlias: live
+        DeploymentPreference:
+          # Specifies the deployment configuration
+          Type: Linear10PercentEvery2Minutes
       Policies:
         - AmazonS3FullAccess
         - AWSLambdaBasicExecutionRole
